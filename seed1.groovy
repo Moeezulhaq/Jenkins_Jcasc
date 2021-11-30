@@ -10,11 +10,11 @@ pipelineJob('github-demo') {
             scm {
                 git {
                     remote {
-                        github('jenkinsci/pipeline-examples')
+                        github('https://github.com/Moeezulhaq/Jenkins_ECS.git')
                     }
                 }
             }
-            scriptPath('declarative-examples/simple-examples/environmentInStage.groovy')
+            // scriptPath('declarative-examples/simple-examples/environmentInStage.groovy')
         }
     }
 }
