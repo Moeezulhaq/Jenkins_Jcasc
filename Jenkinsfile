@@ -1,20 +1,10 @@
 pipeline {
- agent any
- stages {
-  stage('Build') {
-   steps {
-    echo 'Building..'
-   }
-  }
-  stage('Test') {
-   steps {
-    echo 'Testing..'
-   }
-  }
-  stage('Deploy') {
-   steps {
-    echo 'Deploying....'
-   }
-  }
- }
+    agent any 
+    stages {
+        stage('Pipeline to seed or update all pipelines') {
+            steps {
+                jobDsl  targets: ['*.groovy'].join('\n')
+            }
+        }
+    }
 }
