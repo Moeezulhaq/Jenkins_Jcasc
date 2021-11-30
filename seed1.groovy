@@ -1,8 +1,5 @@
-pipelineJob('example') {
-    definition {
-        cps {
-            script(readFileFromWorkspace('project-a-workflow.groovy'))
-            sandbox()
-        }
-    }
+job('example') {
+  steps {
+    shell('echo Hello World!')
+  }
 }
