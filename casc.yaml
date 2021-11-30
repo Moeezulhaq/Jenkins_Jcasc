@@ -25,19 +25,7 @@ jobs:
                         url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
                       }
                       branch("*/master")
-                    }
-                    git{
-                      remote {
-                        url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
-                      }
-                      branch("*/master")
-                    }
-                    git{
-                      remote {
-                        url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
-                      }
-                      branch("*/master")
-                    }                                        
+                    }                                       
                 }
             }
           }
