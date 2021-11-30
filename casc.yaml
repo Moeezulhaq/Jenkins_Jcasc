@@ -16,7 +16,7 @@ unclassified:
     url: http://localhost:80
 jobs:
     - script: >
-        pipelineJob("Seed or update all pipelines") {
+        pipelineJob("Testing pipeline") {
         definition {
             cpsScm {
                 scm {
@@ -24,8 +24,20 @@ jobs:
                       remote {
                         url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
                       }
-                      branch("*/main")
+                      branch("*/master")
                     }
+                    git{
+                      remote {
+                        url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
+                      }
+                      branch("*/master")
+                    }
+                    git{
+                      remote {
+                        url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
+                      }
+                      branch("*/master")
+                    }                                        
                 }
             }
           }
