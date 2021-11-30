@@ -1,0 +1,39 @@
+jenkins:
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+       - id: ${JENKINS_ADMIN_ID}
+         password: ${JENKINS_ADMIN_PASSWORD}
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+unclassified:
+  location:
+    url: http://localhost:80
+jobs:
+    - script: >
+        pipelineJob("Seed or update all pipelines") {
+        definition {
+            cpsScm {
+                scm {
+                    git{
+                      remote {
+                        url("https://github.com/Moeezulhaq/Jenkins_Jcasc.git")
+                      }
+                      branch("*/main")
+                    }
+                }
+            }
+          }
+        }
+  # remotingSecurity:
+  #   enabled: true
+security:
+  queueItemAuthenticator:
+    authenticators:
+    - global:
+        strategy: triggeringUsersAuthorizationStrategy 
