@@ -1,20 +1,5 @@
-pipeline {
- agent any
- stages {
-  stage('Build') {
-   steps {
-    echo 'Building..'
-   }
+job('example1') {
+  steps {
+    shell('echo Hello Worlddddd')
   }
-  stage('Test') {
-   steps {
-    echo 'Testing..'
-   }
-  }
-  stage('Deploy') {
-   steps {
-    echo 'Deploying....'
-   }
-  }
- }
 }
