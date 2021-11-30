@@ -1,4 +1,4 @@
-pipeline {
+pipeline ("Testing"){
  agent any
  stages {
   stage('Build') {
