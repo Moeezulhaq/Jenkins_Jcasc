@@ -10,7 +10,7 @@ pipelineJob('github-demo') {
             scm {
                 git {
                     remote {
-                        github('Moeezulhaq/Jenkins_ECS')
+                        github('Moeezulhaq/Jenkins_test')
                     }
                 }
             }
