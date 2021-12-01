@@ -1,8 +1,8 @@
-job('demo') {
-    steps {
-        shell('echo Hello World!')
-    }
-}
+// job('demo') {
+//     steps {
+//         shell('echo Hello World!')
+//     }
+// }
 
 pipelineJob('github-demo') {
     definition {
