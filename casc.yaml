@@ -16,7 +16,7 @@ unclassified:
     url: http://localhost:80
 jobs:
     - script: >
-        pipelineJob("Testing pipeline") {
+        pipelineJob("Pipeline to seed or update all pipelines") {
         definition {
             cpsScm {
                 scm {
