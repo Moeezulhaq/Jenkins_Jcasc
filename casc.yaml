@@ -48,8 +48,18 @@ credentials:
               secret: '${SLACK_TOKEN}'
               description: Slack token
 
-
 unclassified:
   slackNotifier:
     teamDomain: eurustechnologies # i.e. your-company (just the workspace name not the full url)
     tokenCredentialId: slack-token
+  awsCredentialsProvider:
+    # cache: (boolean)           # optional
+    # endpointConfiguration:     # optional
+    #   serviceEndpoint: (URL)
+    #   signingRegion: us-east-1
+    listSecrets:               # optional
+      filters:
+        - key: Name
+          values:
+            - slack_token_moeez
+
