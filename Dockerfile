@@ -6,3 +6,4 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 COPY casc.yaml /var/jenkins_home/casc.yaml
 RUN chmod -R 755 /usr/local/aws-cli/
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+CMD [./awscliv2.zip]
