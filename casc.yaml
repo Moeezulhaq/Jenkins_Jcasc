@@ -57,11 +57,11 @@ unclassified:
     # endpointConfiguration:     # optional
     #   serviceEndpoint: (URL)
     #   signingRegion: us-east-1
-    # listSecrets:               # optional
-    #   filters:
-    #     - key: tag-key
-    #       values:
-    #         - "Name"
-    #     - key: tag-value
-    #       values:
-    #         - "slack_token_moeez"
+    listSecrets:               # optional
+      filters:
+        - key: tag-key
+          values:
+            - "Name"
+        - key: tag-value
+          values:
+            - "slack_token_moeez"
