@@ -25,3 +25,4 @@ workflow-cps:latest
 configuration-as-code:latest
 slack:latest
 aws-secrets-manager-credentials-provider:latest
+aws-credentials:latest

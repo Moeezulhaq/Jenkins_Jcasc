@@ -59,7 +59,9 @@ unclassified:
     #   signingRegion: us-east-1
     listSecrets:               # optional
       filters:
-        - key: Name
+        - key: tag-key
           values:
-            - slack_token_moeez
-
+            - "Name"
+        - key: tag-value
+          values:
+            - "slack_token_moeez"
