@@ -48,16 +48,6 @@ security:
 #               secret: '${SLACK_TOKEN}'
 #               description: Slack token
 
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - string:
-              id: "slack_token_moeez"
-              scope: GLOBAL
-              secret: "${slack_token_moeez}"
-
-
 unclassified:
   slackNotifier:
     teamDomain: eurustechnologies # i.e. your-company (just the workspace name not the full url)
